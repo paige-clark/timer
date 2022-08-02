@@ -19,9 +19,9 @@ OUTPUT: a beep and a message when an alarm is finished
   attempting to call setTimeout with a non-number.
 */
 
-const input = (process.argv.slice(2))
+const input = (process.argv.slice(2));
 
-const timer = function (userInput) {
+const timer = function(userInput) {
   for (const alarm of userInput) {
     if (Math.sign(Number(alarm)) !== - 1) {
       let alarmTime = Number(alarm) * 1000;
@@ -32,7 +32,7 @@ const timer = function (userInput) {
           process.stdout.write('\x07');
         }
         if (Number(alarm) > 1) {
-          console.log(`Timer set for ${alarm} seconds is done!`)
+          console.log(`Timer set for ${alarm} seconds is done!`);
           process.stdout.write('\x07');
         }
       }, alarmTime);
